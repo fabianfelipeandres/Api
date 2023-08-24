@@ -10,6 +10,7 @@ const md_upload = multipart({ uploadDir: './src/uploads/users'});
 var api = express.Router();
 
 api.get('/probando-controlador', UserController.pruebas);
+api.get('/users', UserController.getUsers);
 api.post('/register', UserController.saveUser);
 api.post('/registro', UserController.saveUsers);
 api.post('/upload', md_upload, UserController.uploadImage);
